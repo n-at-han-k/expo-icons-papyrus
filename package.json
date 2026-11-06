@@ -1,0 +1,26 @@
+{
+  "name": "expo-icons-papyrus",
+  "version": "0.1.0",
+  "description": "Papirus icons as react-native-svg components for Expo, one module per icon",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./icons/*": "./src/icons/*.ts",
+    "./icon-names": "./src/icon-names.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "icons.json",
+    "scripts",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-native-svg": ">=15",
+    "uniwind": ">=1.13.0"
+  }
+}

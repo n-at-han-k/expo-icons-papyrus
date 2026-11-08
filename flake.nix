@@ -12,7 +12,15 @@
     in
     {
       packages = nixpkgs-unstable.lib.genAttrs systems (
-        system: nixpkgs-unstable.legacyPackages.${system}.callPackage ./nix/package/expo-icons-papyrus { }
+        system:
+        let
+          expo-icons-papyrus =
+            nixpkgs-unstable.legacyPackages.${system}.callPackage ./nix/package/expo-icons-papyrus { };
+        in
+        {
+          inherit expo-icons-papyrus;
+          default = expo-icons-papyrus;
+        }
       );
     };
 }
